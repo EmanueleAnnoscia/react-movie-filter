@@ -2,6 +2,9 @@
 import { useState, useEffect } from 'react';
 import filmsData from './data/films';
 
+
+
+
 function App() {
   const [films, setFilms] = useState(filmsData);
   const [selectedGenre, setSelectedGenre] = useState('');
@@ -9,6 +12,7 @@ function App() {
   const [newFilm, setNewFilm] = useState({ title: '', genre: '' });
   const [filteredFilm, setFilteredFilm] = useState([])
   const [filteredGenre, setFilteredGenre] = useState([])
+  
 
   const genres = [];
 
@@ -88,6 +92,9 @@ function App() {
         </select>
       </label>
 
+     
+
+
       <input
         type="text"
         placeholder="Cerca per titolo..."
@@ -98,6 +105,7 @@ function App() {
       <ul>
         {filteredFilm.map((film, index) => (
           <li key={index}>{film.title} - {film.genre}</li>
+
         ))}
       </ul>
 
@@ -117,6 +125,9 @@ function App() {
         />
         <button type="submit">Aggiungi</button>
       </form>
+
+
+
     </>
   );
 }
