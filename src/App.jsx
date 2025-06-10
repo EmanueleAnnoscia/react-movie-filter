@@ -11,7 +11,7 @@ function App() {
   const [searchFilm, setSearchFilm] = useState('');
   const [newFilm, setNewFilm] = useState({ title: '', genre: '' });
   const [filteredFilm, setFilteredFilm] = useState([])
-  const [filteredGenre, setFilteredGenre] = useState([])
+  
   
 
   const genres = [];
